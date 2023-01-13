@@ -21,10 +21,10 @@ PREREQUISITES:
 •	NUGet Packages
 1.	ASP.NET core entity framework
 2.	ASP.NET core SQL Server
-3.	Microsoft.EntityFrameworkCore(7.0.1)
-4.	Microsoft.EntityFrameworkCore.SqlServer(7.0.1)
-5.	Microsoft.EntityFrameworkCore.Tools(7.0.1)
-6.	Microsoft.VisualStudio.Web.CodeGeneration.Design(6.0.11)
+3.	Microsoft.EntityFrameworkCore
+4.	Microsoft.EntityFrameworkCore.SqlServer
+5.	Microsoft.EntityFrameworkCore.Tools
+6.	Microsoft.VisualStudio.Web.CodeGeneration.Design
 
 INSTALLATION: 
 
