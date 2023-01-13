@@ -1,0 +1,31 @@
+﻿@model List<Project_Expense_Tracker.context.expense>
+@{
+    ViewBag.Title = "ExpenseList";
+}
+
+<h2>ExpenseList</h2>
+<table class="table table-hover" >
+    <tr>
+        <th>Title</th>
+        <th>Amount</th>
+        <th>Description</th>
+        <th>Date and time</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.EXPENSE_TITLE</td>
+                    <td>@item.EXPENSE_AMOUNT</td>
+                    <td>@item.DISCRIPTION</td>
+                    <td>@item.DATE_TIME</td>
+                    <td>
+                        <a herf="@Url.Action("EditExpense", new {id = item.id})" class="btn btn-success"> Edit </a>
+                        <a herf="@Url.Action("DeleteEx", new {item.id})" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+
+            }
+
+</table>

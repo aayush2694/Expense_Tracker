@@ -1,0 +1,28 @@
+﻿@model List<Project_Expense_Tracker.context.category>
+@{
+    ViewBag.Title = "CategoryList";
+}
+<h2>CategoryList</h2>
+
+<table class="tabel tabel-hover">
+    <tr>
+        <th> Category Name</th>
+        <th>Category Limit</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CATEGORY_TITLE</td>
+            <td>@item.CATEGORY_AMOUNT</td>
+            <td>
+                <a href="@Url.Action("category", new {item.CATEGORY_TITLE,item.CATEGORY_AMOUNT})" class="btn btn-success">Edit</a>
+                <a herf="@Url.Action("Delete", new {item.CAT_id})" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+
+    }
+</table>
+
+
+

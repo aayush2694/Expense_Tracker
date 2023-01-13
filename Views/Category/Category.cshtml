@@ -1,0 +1,40 @@
+﻿@model Project_Expense_Tracker.context.category
+@{
+    ViewBag.Title = "Category";
+}
+<h2>Category</h2>
+
+<style>
+    .error{
+        color:red;
+    }
+</style>
+
+@using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+{
+    <div class="container">
+        <div class="form-group">
+            @Html.HiddenFor(x=>x.CAT_id)
+            <label>Category Title</label>
+            @Html.ValidationMessageFor(x => x.CATEGORY_TITLE,"", new {@class="error"})
+            @Html.TextBoxFor(x => x.CATEGORY_TITLE, new { @class = "form-control" })
+        </div>
+    
+
+    <div class="container">
+        <div class="form-group">
+            <label>Category Limit</label>
+            @Html.ValidationMessageFor(x => x.CATEGORY_AMOUNT, "", new { @class = "error" })
+            @Html.TextBoxFor(x => x.CATEGORY_AMOUNT, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-control" >
+        <button type="submit" class="btn btn-primary">ADD</button>
+    </div>
+
+    </div>
+}
+
+
+
